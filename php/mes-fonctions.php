@@ -9,6 +9,7 @@ function creerConnexionBDD()
     // TODO: IL FAUDRAIT ISOLER CE CODE 
     // POUR NE PAS AVOIR A MODIFIER LE FICHIER mes-fonctions.php
     // INFOS A CHANGER POUR CHAQUE PROJET
+    // ATTENTION SUR MAC: AVEC MAMP LE MOT DE PASSE root
     $database   = "cms";   // NE PAS OUBLIER DE LE CHANGER
     $user       = "root";
     $password   = "";
@@ -172,6 +173,10 @@ function modifierLigne($nomTable, $id, $tabAssoColonneValeur)
     // A VOUS LES STUDIOS... 
     // LA LISTE DES COLONNES EST DANS LES CLES DU TABLEAU ASSOCIATIF $tabAssoColonneValeur
     $indice = 0;
+    // on crée une variable $nouvelleValeur
+    // mais on ne l'utilise pas
+    // => si on veut la clé, PHP nous oblige à ajouter aussi la variable pour la valeur
+    // (mais on ne s'en sert pas)
     foreach($tabAssoColonneValeur as $colonne => $nouvelleValeur)
     {
         // est-ce qu'on est au début ?
