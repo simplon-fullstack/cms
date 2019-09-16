@@ -86,7 +86,37 @@
     * UN BACK-OFFICE
         * pages d'admin pour gérer le contenu du site...
 
+## CRUD sur la table SQL blog
 
+    On stocke les informations en Base De Données SQL (BDD)
+    * On va créer une BDD pour ce projet (dans phpmyadmin...)
+            nom de la BDD:  cms
+            charset:        utf8mb4_general_ci
+
+    * Dans la BDD cms, on va créer une table SQL pour gérer nos articles
+            nom de la table SQL: blog
+            colonnes de la table:
+    id                  INT             INDEX=PRIMARY       A_I(auto_increment)
+    titre               VARCHAR(160)
+    contenu             TEXT
+    photo               VARCHAR(160)
+    datePublication     DATETIME
+    categorie           VARCHAR(160)
+
+
+    TYPE DATETIME   YYYY-MM-DD HH:II:SS
+    * exemple:      2019-09-16 10:20:30
+    * => lisible par un être humain
+
+        
+    et ensuite, on ajoute sur la page admin-blog.php
+    * formulaire CRUD
+        * Création d'un article
+        * Suppression d'un article
+        * Modification d'un article
+
+    * Créer les formulaires HTML
+    * Et ensuite ajouter le traitement PHP    
 
 
 
