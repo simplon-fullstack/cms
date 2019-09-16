@@ -64,12 +64,12 @@
 
     Site internet:
     * Faire la liste des pages du site
-    * Accueil                       index.php
-    * Blog                          blog.php
-    * Listes des centres aérés      centres.php
-    * réservation d'un activité     reservation.php
-    * Contact                       contact.php
-    * ...
+        * Accueil                       index.php
+        * Blog                          blog.php
+        * Listes des centres aérés      centres.php
+        * réservation d'une activité    reservation.php
+        * Contact                       contact.php
+        * ...
 
     * ET NE PAS OUBLIER D'INFORMER LE CLIENT
     * QU'IL AURA AUSSI BESOIN DE PAGES ADMIN (BACK-OFFICE)
