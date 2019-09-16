@@ -71,6 +71,12 @@ Site internet:
 * Contact                       contact.php
 * ...
 
+* ET NE PAS OUBLIER D'INFORMER LE CLIENT
+* QU'IL AURA AUSSI BESOIN DE PAGES ADMIN (BACK-OFFICE)
+* => POUR GERER LE CONTENU DE SON SITE
+* => LE DEVELOPPEUR DOIT CONSTRUIRE UN CMS
+
+
 
 
 
