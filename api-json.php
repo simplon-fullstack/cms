@@ -27,6 +27,11 @@ if ($idFormulaire != "")
         // ON VA CHARGER LE FICHIER DE TRAITEMENT CORRESPONDANT
         require "php/controller/traitement-blog-delete.php";
     }
+    if ($idFormulaire == "blog-update")
+    {
+        // ON VA CHARGER LE FICHIER DE TRAITEMENT CORRESPONDANT
+        require "php/controller/traitement-blog-update.php";
+    }
 }
 
 // on ajoute le message de confirmation

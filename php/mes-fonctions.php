@@ -133,3 +133,79 @@ CODESQL;
     // renvoyer $pdoStatement
     return $pdoStatement;
 }
+
+
+// JE VEUX CREER UNE FONCTION modifierLigne 
+// QUI VA PRENDRE EN PARAMETRES
+// PARAM1: LE NOM DE LA TABLE
+// PARAM2: id DE LA LIGNE A MODFIER
+// PARAM3: UN TABLEAU ASSOCIATIF QUI DONNE POUR CHAQUE COLONNE LA NOUVELLE VALEUR
+// exemple
+// modifierLigne("blog", "1", ["titre" => "nouveau titre", "contenu" => "nouveau contenu"]);
+
+/*
+REQUETE SQL A CONSTRUIRE ?
+
+UPDATE blog 
+SET 
+titre = 'nouveau titre',
+contenu = 'nouveau contenu'
+WHERE 
+id = 1;
+
+# REQUETE PREPAREE A CONSTRUIRE
+
+UPDATE blog 
+SET 
+titre = :titre,
+contenu = :contenu
+WHERE 
+id = 1;
+
+*/
+
+function modifierLigne($nomTable, $id, $tabAssoColonneValeur)
+{
+    $id = intval($id);
+
+    $listeColonneToken = "";
+    // A VOUS LES STUDIOS... 
+    // LA LISTE DES COLONNES EST DANS LES CLES DU TABLEAU ASSOCIATIF $tabAssoColonneValeur
+    $indice = 0;
+    foreach($tabAssoColonneValeur as $colonne => $nouvelleValeur)
+    {
+        // est-ce qu'on est au début ?
+        if ($indice > 0)
+        {
+            // pour les élements suivants, je rajoute une virgule
+            $listeColonneToken = $listeColonneToken . ",$colonne = :$colonne";
+
+        }
+        else
+        {
+            // au début, je ne mets pas de virgule
+            $listeColonneToken = $listeColonneToken . "$colonne = :$colonne";
+        }
+        
+        $indice++;
+    }
+    // REQUETE SQL PREPAREE
+    $requeteSQLPreparee =
+<<<CODESQL
+
+UPDATE $nomTable
+SET
+$listeColonneToken
+WHERE id = $id
+
+CODESQL;
+
+    // ENVOYER LA REQUETE SQL PREPAREE
+    $pdoStatement = envoyerRequeteSQL($requeteSQLPreparee, $tabAssoColonneValeur);
+
+    // renvoyer $pdoStatement
+    return $pdoStatement;
+
+}
+
+
