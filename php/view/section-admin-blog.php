@@ -1,94 +1,98 @@
 <section>
-            <h3>Admin: Blog UPDATE</h3>
+    <h3>Admin Blog (CRUD pour la table blog)</h3>
+</section>
 
-            <!-- formulaire de création d'article de blog -->
-            <form action="api-json.php" method="POST">
-                <label>
-                    <p>id</p>
-                    <input type="text"  name="id" required placeholder="entrez id">
-                </label>
-                <label>
-                    <p>titre</p>
-                    <input type="text"  name="titre" required placeholder="entrez le titre">
-                </label>
-                <label>
-                    <p>contenu</p>
-                    <textarea name="contenu" cols="80" rows="10" required placeholder="entrez le contenu"></textarea>
-                </label>
-                <label>
-                    <p>photo</p>
-                    <input type="text"  name="photo" required placeholder="choisissez la photo" value="assets/images/photo1.jpg">
-                </label>
-                <label>
-                    <p>date publication</p>
-                    <!--fonction php pour la date: https://www.php.net/manual/fr/function.date.php -->
-                    <input type="text"  name="datePublication" required placeholder="entrez la date" value="<?php echo date("Y-m-d H:i:s")?>">
-                </label>
-                <label>
-                    <p>catégorie</p>
-                    <input type="text"  name="categorie" required placeholder="choisissez la photo" value="blog">
-                </label>
-                <button type="submit">modifier votre article</button>
-                <!-- partie technique du formulaire -->
-                <div class="confirmation">
-                    <!-- ici on verra le message de confirmation -->
-                </div>
-                <input type="hidden" name="idFormulaire" value="blog-update">
-            </form>    
-        </section>
+<section>
+    <h3>Admin: Blog UPDATE</h3>
+
+    <!-- formulaire de création d'article de blog -->
+    <form action="api-json.php" method="POST">
+        <label>
+            <p>id</p>
+            <input type="text"  name="id" required placeholder="entrez id">
+        </label>
+        <label>
+            <p>titre</p>
+            <input type="text"  name="titre" required placeholder="entrez le titre">
+        </label>
+        <label>
+            <p>contenu</p>
+            <textarea name="contenu" cols="80" rows="10" required placeholder="entrez le contenu"></textarea>
+        </label>
+        <label>
+            <p>photo</p>
+            <input type="text"  name="photo" required placeholder="choisissez la photo" value="assets/images/photo1.jpg">
+        </label>
+        <label>
+            <p>date publication</p>
+            <!--fonction php pour la date: https://www.php.net/manual/fr/function.date.php -->
+            <input type="text"  name="datePublication" required placeholder="entrez la date" value="<?php echo date("Y-m-d H:i:s")?>">
+        </label>
+        <label>
+            <p>catégorie</p>
+            <input type="text"  name="categorie" required placeholder="choisissez la photo" value="blog">
+        </label>
+        <button type="submit">modifier votre article</button>
+        <!-- partie technique du formulaire -->
+        <div class="confirmation">
+            <!-- ici on verra le message de confirmation -->
+        </div>
+        <input type="hidden" name="idFormulaire" value="blog-update">
+    </form>    
+</section>
 
 
 
-        <section>
-            <h3>Admin: Blog DELETE</h3>
-            <form action="api-json.php" method="POST">
-                <input type="text" name="nomTable" required placeholder="entrez le nom de la table">
-                <input type="number" name="id" required placeholder="entrez id de la ligne">
-                <button type="submit">supprimer la ligne</button>
-                <div class="confirm"></div>
-                <input type="hidden" name="idFormulaire" value="blog-delete">
-            </form>
-        </section>
+<section>
+    <h3>Admin: Blog DELETE</h3>
+    <form action="api-json.php" method="POST">
+        <input type="text" name="nomTable" required placeholder="entrez le nom de la table">
+        <input type="number" name="id" required placeholder="entrez id de la ligne">
+        <button type="submit">supprimer la ligne</button>
+        <div class="confirm"></div>
+        <input type="hidden" name="idFormulaire" value="blog-delete">
+    </form>
+</section>
 
-        <section>
-            <h3>Admin: Blog CREATE</h3>
-            <h3>(CRUD pour la table blog)</h3>
+<section>
+    <h3>Admin: Blog CREATE</h3>
 
-            <!-- formulaire de création d'article de blog -->
-            <form action="api-json.php" method="POST">
-                <label>
-                    <p>titre</p>
-                    <input type="text"  name="titre" required placeholder="entrez le titre">
-                </label>
-                <label>
-                    <p>contenu</p>
-                    <textarea name="contenu" cols="80" rows="10" required placeholder="entrez le contenu"></textarea>
-                </label>
-                <label>
-                    <p>photo</p>
-                    <input type="text"  name="photo" required placeholder="choisissez la photo" value="assets/images/photo1.jpg">
-                </label>
-                <label>
-                    <p>date publication</p>
-                    <!--fonction php pour la date: https://www.php.net/manual/fr/function.date.php -->
-                    <input type="text"  name="datePublication" required placeholder="entrez la date" value="<?php echo date("Y-m-d H:i:s")?>">
-                </label>
-                <label>
-                    <p>catégorie</p>
-                    <input type="text"  name="categorie" required placeholder="choisissez la photo" value="blog">
-                </label>
-                <button type="submit">publier votre article</button>
-                <!-- partie technique du formulaire -->
-                <div class="confirmation">
-                    <!-- ici on verra le message de confirmation -->
-                </div>
-                <input type="hidden" name="idFormulaire" value="blog-create">
-            </form>    
-        </section>
-        <section>
+    <!-- formulaire de création d'article de blog -->
+    <form action="api-json.php" method="POST">
+        <label>
+            <p>titre</p>
+            <input type="text"  name="titre" required placeholder="entrez le titre">
+        </label>
+        <label>
+            <p>contenu</p>
+            <textarea name="contenu" cols="80" rows="10" required placeholder="entrez le contenu"></textarea>
+        </label>
+        <label>
+            <p>photo</p>
+            <input type="text"  name="photo" required placeholder="choisissez la photo" value="assets/images/photo1.jpg">
+        </label>
+        <label>
+            <p>date publication</p>
+            <!--fonction php pour la date: https://www.php.net/manual/fr/function.date.php -->
+            <input type="text"  name="datePublication" required placeholder="entrez la date" value="<?php echo date("Y-m-d H:i:s")?>">
+        </label>
+        <label>
+            <p>catégorie</p>
+            <input type="text"  name="categorie" required placeholder="choisissez la photo" value="blog">
+        </label>
+        <button type="submit">publier votre article</button>
+        <!-- partie technique du formulaire -->
+        <div class="confirmation">
+            <!-- ici on verra le message de confirmation -->
+        </div>
+        <input type="hidden" name="idFormulaire" value="blog-create">
+    </form>    
+</section>
 
-            <!-- la balise pre garde les espaces et les retours à la ligne: cool -->
-            <pre>
+<section>
+
+    <!-- la balise pre garde les espaces et les retours à la ligne: cool -->
+    <pre>
 Create
  Read
   Update
@@ -133,5 +137,5 @@ VALUES
 
 
 
-            </pre>
-        </section>
+    </pre>
+</section>
