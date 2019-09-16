@@ -76,7 +76,15 @@ Site internet:
 * => POUR GERER LE CONTENU DE SON SITE
 * => LE DEVELOPPEUR DOIT CONSTRUIRE UN CMS
 
+## Content Management System (CMS)
 
+UN CMS SE COMPOSE
+* UN FRAMEWORK (CADRE DE TRAVAIL)
+    * librairie de code (ici: mes-fonctions.php)
+    * choix d'organisation du code
+    * => conventions de nommage
+* UN BACK-OFFICE
+    * pages d'admin pour gérer le contenu du site...
 
 
 

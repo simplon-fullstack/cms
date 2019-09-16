@@ -39,12 +39,14 @@ function envoyerRequeteSQL ($requeteSQLPreparee, $tabAssoColonneValeur)
 }
 
 // CETTE FONCTION DOIT RENVOYER UN TABLEAU $tabLigne
-function lireTableBlog()
+// on améliore la fonction 
+// pour pouvoir la ré-utiliser avec n'importe quelle table
+function lireTable($nomTable)
 {
     $requeteSQLPreparee =
 <<<CODESQL
 
-SELECT * FROM blog
+SELECT * FROM $nomTable
 ORDER BY id DESC
 
 CODESQL;
@@ -97,61 +99,37 @@ function insererLigneTable($nomTable, $tabAssoColonneValeur)
     $requeteSQLPreparee = concatenerTexteAsso($nomTable, $tabAssoColonneValeur);
     // ETAPE2: ENVOYER LA REQUETE
     $pdoStatement = envoyerRequeteSQL($requeteSQLPreparee, $tabAssoColonneValeur);
+
+    // renvoyer $pdoStatement
+    return $pdoStatement;
 }
 
-/*
 
-function insererLigneBlog ($tabAssoColonneValeur)
+// DELETE
+// ON VEUT CREER UNE FONCTION
+// QUI PREND EN PARAMETRES
+// 1ER PARAMETRE: LE NOM DE LA TABLE
+// 2E PARAMETRE: id DE LA LIGNE A SUPPRIMER
+function supprimerLigne($nomTable, $id)
 {
-    // ETAPE1: CREER UNE REQUETE SQL PREPAREE
+    // IL FAUT PROTEGER $id POUR ASSURER QUE C'EST UN NOMBRE
+    // https://www.php.net/manual/fr/function.intval.php
+    // filtre pour convertir $id en nombre entier
+    $id = intval($id);
+    // CREER UNE REQUETE SQL PREPAREE
     $requeteSQLPreparee =
 <<<CODESQL
 
-INSERT INTO blog
-(titre, contenu, photo)
-VALUES
-( :titre, :contenu, :photo )
+DELETE FROM $nomTable
+WHERE id = $id
 
 CODESQL;
 
-    // ETAPE2: ENVOYER LA REQUETE
+    // pas de jeton :id donc rien dans le tableau
+    $tabAssoColonneValeur = [];
+    // ENVOYER LA REQUETE SQL PREPAREE
     $pdoStatement = envoyerRequeteSQL($requeteSQLPreparee, $tabAssoColonneValeur);
 
+    // renvoyer $pdoStatement
+    return $pdoStatement;
 }
-
-// DEFINIR/DECLARER LA FONCTION
-function insererLigneContact ($tabAssoColonneValeur)
-{
-    // ETAPE1: CREER UNE REQUETE SQL PREPAREE
-    $requeteSQLPreparee =
-<<<CODESQL
-
-INSERT INTO contact
-(nom, email, message)
-VALUES
-( :nom, :email, :message )
-
-CODESQL;
-    // ETAPE2: ENVOYER LA REQUETE
-    $pdoStatement = envoyerRequeteSQL($requeteSQLPreparee, $tabAssoColonneValeur);
-
-}
-
-*/
-        /*        
-
-
-        $requeteSQL =
-<<<CODESQL
-
-INSERT INTO contact
-(nom, email, message)
-VALUES
-( '$nom', '$email', '$message' )
-
-CODESQL;
-        // MANIERE RAPIDE MAIS PAS SECURISEE CONTRE LES INJECTIONS SQL... 
-        // https://www.php.net/manual/fr/pdo.exec.php
-        // $dbh->exec($requeteSQL);
-
-        */

@@ -1,5 +1,16 @@
         <section>
-            <h3>Admin: Blog</h3>
+            <h3>Admin: Blog DELETE</h3>
+            <form action="api-json.php" method="POST">
+                <input type="text" name="nomTable" required placeholder="entrez le nom de la table">
+                <input type="number" name="id" required placeholder="entrez id de la ligne">
+                <button type="submit">supprimer la ligne</button>
+                <div class="confirm"></div>
+                <input type="hidden" name="idFormulaire" value="blog-delete">
+            </form>
+        </section>
+
+        <section>
+            <h3>Admin: Blog CREATE</h3>
             <h3>(CRUD pour la table blog)</h3>
 
             <!-- formulaire de création d'article de blog -->
