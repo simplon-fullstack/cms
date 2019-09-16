@@ -65,6 +65,10 @@ form p {
     margin:0.25rem;
 }
 
+pre {
+    padding:1rem;
+}
+
 /* MENU FLEX */
 
 nav ul {
