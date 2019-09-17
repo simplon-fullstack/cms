@@ -25,3 +25,7 @@ insererLigneTable("blog", [
 // message de confirmation pour l'utilisateur
 $confirmation = "article publié ($titre)";
 
+// en plus, on va fournir la liste des articles publiés
+$tabBlog = lireTable("blog");
+// je rajoute le tableau dans la réponse à envoyer au navigateur
+$tabAssoJson["tabBlog"] = $tabBlog; 

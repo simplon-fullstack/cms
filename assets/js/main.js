@@ -47,7 +47,37 @@ listeForm.forEach(function(element){
                 // dans ma balise form je vais chercher la balise div.confirmation
                 this.querySelector(".confirmation").innerHTML = objetJS.confirmation;
             }
+
+            if (objetJS.tabBlog)
+            {
+                // la fonction va créer le HTML pour afficher les articles
+                creerHtmlBlog(objetJS.tabBlog);
+            }
         });
 
     })
 });
+
+
+function creerHtmlBlog (tabBlog)
+{
+    // vider la liste avant de la mettre à jour
+    // insérer le code HTML dans la balise div.listeBlog
+    var listeBlog = document.querySelector("div.listeBlog");
+    listeBlog.innerHTML = '';
+    
+    // parcourir le tableau
+    tabBlog.forEach(function(article){
+        // je vais construire le HTML
+        var codeHtmlArticle = `
+            <article>
+                <h3>${article.titre}</h3>
+                <img src="${article.photo}" alt="${article.photo}">
+                <p>${article.contenu}</p>
+            </article>
+        `;
+
+        listeBlog.insertAdjacentHTML('beforeend', codeHtmlArticle);
+
+    });
+}

@@ -90,6 +90,13 @@
 </section>
 
 <section>
+    <h3>LISTE DES ARTICLES</h3>
+    <div class="listeBlog">
+        <!-- ICI ON VA INSERER LA LISTE DES ARTICLES -->
+    </div>
+</section>
+
+<section>
 
     <!-- la balise pre garde les espaces et les retours à la ligne: cool -->
     <pre>
