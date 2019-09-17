@@ -104,6 +104,7 @@
 <section>
 
     <!-- la balise pre garde les espaces et les retours à la ligne: cool -->
+<!--
     <pre>
 Create
  Read
@@ -137,17 +138,7 @@ INSERT INTO
 VALUES 
 (NULL, 'titre1028', 'contenu1028', 'assets/images/photo1.jpg', '2019-09-16 10:28:00', 'blog');
 
-
-
-            
-            
-
-
-
-
-
-
-
-
     </pre>
+-->
+
 </section>

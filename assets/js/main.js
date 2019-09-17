@@ -129,10 +129,6 @@ function creerHtmlBlog (tabBlog)
             // photo
             var inputCategorie = document.querySelector('.section-update input[name=categorie]');
             inputCategorie.value = article.categorie;
-
-
-
-
         });
     });
 
