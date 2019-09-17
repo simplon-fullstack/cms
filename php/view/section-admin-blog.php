@@ -6,7 +6,7 @@
     <h3>Admin: Blog UPDATE</h3>
 
     <!-- formulaire de création d'article de blog -->
-    <form action="api-json.php" method="POST">
+    <form class="ajax" action="api-json.php" method="POST">
         <label>
             <p>id</p>
             <input type="text"  name="id" required placeholder="entrez id">
@@ -45,11 +45,11 @@
 
 <section>
     <h3>Admin: Blog DELETE</h3>
-    <form action="api-json.php" method="POST">
+    <form class="ajax" action="api-json.php" method="POST">
         <input type="text" name="nomTable" required placeholder="entrez le nom de la table">
         <input type="number" name="id" required placeholder="entrez id de la ligne">
         <button type="submit">supprimer la ligne</button>
-        <div class="confirm"></div>
+        <div class="confirmation"></div>
         <input type="hidden" name="idFormulaire" value="blog-delete">
     </form>
 </section>
@@ -58,7 +58,7 @@
     <h3>Admin: Blog CREATE</h3>
 
     <!-- formulaire de création d'article de blog -->
-    <form action="api-json.php" method="POST">
+    <form class="ajax" action="api-json.php" method="POST">
         <label>
             <p>titre</p>
             <input type="text"  name="titre" required placeholder="entrez le titre">
