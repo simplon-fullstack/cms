@@ -3,10 +3,10 @@
 </section>
 
 <section class="section-update">
-    <h3>Admin: Blog UPDATE</h3>
-
-    <!-- formulaire de création d'article de blog -->
     <div class="close">fermer la popup</div>
+    <h3>Admin: Blog UPDATE</h3>
+    <!-- formulaire de création d'article de blog -->
+    
     <form class="ajax" action="api-json.php" method="POST">
         <label>
             <p>id</p>

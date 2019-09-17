@@ -12,6 +12,7 @@ html, body {
 h1, h2, h3 {
     padding:1rem;
     margin-top:0;
+    margin-bottom:0.5rem;
 }
 
 footer {
@@ -164,6 +165,9 @@ footer {
 
 .close {
     cursor: pointer;
+    padding:1rem;
+    border:1px solid #ffffff;
+    display:inline-block;
 }
 button {
     cursor: pointer;
@@ -190,4 +194,15 @@ button.delete, button.update {
     width:50%;
     margin:0 auto;
     min-width:160px;
+}
+
+.listeBlogAdmin article {
+    border-top:1px solid #666666;
+    padding-top:1rem;
+    margin:0.5rem;
+    width: calc(100%/4 - 1rem);
+}
+
+.listeBlogAdmin article img {
+    height: calc(100vw / 4);
 }
