@@ -9,6 +9,11 @@ require "php/mes-fonctions.php";
 // etape2: on appelle la fonction
 $tabArticle = lireTable("blog");
 
+// SSR Server Side Rendering
+// On crée le code HTML avec PHP
+// => le navbigateur reçoit directement le code HTML
+// => google référence mieux ce contenu
+
 // on fait une boucle pour parcourir la liste des articles
 foreach($tabArticle as $ligneAsso)
 {

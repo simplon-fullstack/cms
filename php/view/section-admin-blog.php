@@ -2,10 +2,11 @@
     <h3>Admin Blog (CRUD pour la table blog)</h3>
 </section>
 
-<section>
+<section class="section-update">
     <h3>Admin: Blog UPDATE</h3>
 
     <!-- formulaire de création d'article de blog -->
+    <div class="close">fermer la popup</div>
     <form class="ajax" action="api-json.php" method="POST">
         <label>
             <p>id</p>
@@ -42,7 +43,7 @@
 </section>
 
 
-
+<!--
 <section>
     <h3>Admin: Blog DELETE</h3>
     <form class="ajax" action="api-json.php" method="POST">
@@ -53,6 +54,7 @@
         <input type="hidden" name="idFormulaire" value="blog-delete">
     </form>
 </section>
+-->
 
 <section>
     <h3>Admin: Blog CREATE</h3>
@@ -91,7 +93,10 @@
 
 <section>
     <h3>LISTE DES ARTICLES</h3>
-    <div class="listeBlog">
+    <!-- ICI ON CREE LA LSITE DES ARTICLES AVEC JS -->
+    <!-- CSR Client Side Rendering (construction du HTML en JS) -->
+    <!-- Google référence mal le contenu généré par JS -->
+    <div class="listeBlog listeBlogAdmin">
         <!-- ICI ON VA INSERER LA LISTE DES ARTICLES -->
     </div>
 </section>
