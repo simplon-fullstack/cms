@@ -71,7 +71,7 @@
         </label>
         <label>
             <p>photo</p>
-            <input type="text"  name="photo" required placeholder="choisissez la photo" value="assets/images/photo1.jpg">
+            <input type="text"  name="photo" required placeholder="choisissez la photo" value="assets/images/photo0.jpg">
         </label>
         <label>
             <p>date publication</p>
