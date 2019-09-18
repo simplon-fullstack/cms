@@ -96,12 +96,13 @@ function creerHtmlBlog (tabBlog)
         // je vais construire le HTML
         var codeHtmlArticle = `
             <article>
-            <button class="delete" data-id="${article.id}" id="delete-${article.id}">supprimer</button>
-            <button class="update" data-indice="${indice}" data-id="${article.id}" id="update-${article.id}">modifier</button>
-            <h3>${article.titre}</h3>
-            <h4>${article.datePublication}</h4>
-            <img src="${article.photo}" alt="${article.photo}">
-            <p>${article.contenu}</p>
+                <div class="categorie">${article.categorie}</div>
+                <button class="delete" data-id="${article.id}" id="delete-${article.id}">supprimer</button>
+                <button class="update" data-indice="${indice}" data-id="${article.id}" id="update-${article.id}">modifier</button>
+                <h3>${article.titre}</h3>
+                <h4>${article.datePublication}</h4>
+                <img src="${article.photo}" alt="${article.photo}">
+                <p>${article.contenu}</p>
             </article>
         `;
 

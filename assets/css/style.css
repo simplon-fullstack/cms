@@ -207,3 +207,13 @@ button.delete, button.update {
 .listeBlogAdmin article img {
     height: calc(100vw / 4);
 }
+
+
+.listeBlogAdmin article .categorie {
+    margin:0.5rem;
+    padding:0.5rem;
+    max-width:160px;
+    border: 1px solid #666666;
+    border-radius:1rem;
+    text-align:center;
+}
