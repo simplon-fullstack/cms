@@ -15,7 +15,7 @@ $tabArticle = lireTable("blog", "categorie", "galerie");
 
 // SSR Server Side Rendering
 // On crée le code HTML avec PHP
-// => le navbigateur reçoit directement le code HTML
+// => le navigateur reçoit directement le code HTML
 // => google référence mieux ce contenu
 
 // on fait une boucle pour parcourir la liste des articles

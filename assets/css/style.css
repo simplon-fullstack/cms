@@ -78,6 +78,7 @@ nav ul {
     padding-left:0;
     list-style:none;
     width:100%;
+    justify-content: center;
 }
 
 nav ul li {
