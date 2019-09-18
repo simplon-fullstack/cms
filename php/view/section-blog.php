@@ -4,10 +4,14 @@
 <?php
 // ON VA AFFICHER LA LISTE DES ARTICLES
 // etape1: il faut charger mes fonctions
-require "php/mes-fonctions.php";
+require_once "php/mes-fonctions.php";
 
 // etape2: on appelle la fonction
-$tabArticle = lireTable("blog");
+// je ne veux que les lignes dans la catégorie blog
+// parametre1: "blog" est le nom de la table SQL
+// parametre2: "categorie" est le nom de la colonne SQL dans la table blog
+// parametre3: "blog" est la valeur de sélection de la colonne "catégorie"
+$tabArticle = lireTable("blog", "categorie", "blog");
 
 // SSR Server Side Rendering
 // On crée le code HTML avec PHP

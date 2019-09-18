@@ -42,13 +42,26 @@ function envoyerRequeteSQL ($requeteSQLPreparee, $tabAssoColonneValeur)
 // CETTE FONCTION DOIT RENVOYER UN TABLEAU $tabLigne
 // on améliore la fonction 
 // pour pouvoir la ré-utiliser avec n'importe quelle table
-function lireTable($nomTable)
+// AVEC PHP, ON PEUT DONNER DES VALEURS PAR DEFAUT AUX PARAMETRES
+// ATTENTION: LES PARAMETRES AVEC VALEURS PAR DEFAUT SONT EN DERNIER
+function lireTable($nomTable, $colonne="", $valeurSelection="", $tri="id DESC")
 {
+    // on rajoute la clause where seulement si $colonne n'est pas vide
+    if ($colonne != "")
+    {
+        $clauseWhere = "WHERE $colonne = '$valeurSelection'";
+    }
+    else
+    {
+        $clauseWhere = "";
+    }
+
     $requeteSQLPreparee =
 <<<CODESQL
 
 SELECT * FROM $nomTable
-ORDER BY id DESC
+$clauseWhere
+ORDER BY $tri
 
 CODESQL;
 
