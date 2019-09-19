@@ -24,13 +24,22 @@ foreach($tabArticle as $ligneAsso)
     $titre = $ligneAsso["titre"];
     $contenu = $ligneAsso["contenu"];
     $photo = $ligneAsso["photo"];
+    $id    = $ligneAsso["id"];
     // ... à compléter
 
     // construire le code HTML
     echo
 <<<CODEHTML
     <article>
-        <h3>$titre</h3>
+        <!-- on ne passe pas par le formulaire pour produire le lien -->
+        <!-- on crée directement le lien dans une balise a -->
+        <h3><a href="template-article.php?id=$id">$titre</a></h3>
+<!-- 
+        <form action="template-article.php" method="GET">
+            <input type="hidden" name="id" value="$id">
+            <button type="submit">$titre</button>
+        </form>
+-->
         <img src="$photo" alt="$photo">
         <p>$contenu</p>
     </article>

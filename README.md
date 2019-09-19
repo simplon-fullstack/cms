@@ -248,3 +248,55 @@ CODEHTML;
         </section>
 ```
 
+### TEMPLATES
+
+    RESUME DEROULE D'UN PROJET WEB
+    * CLIENT A BESOIN D'UN SITE
+    * VOUS ALLEZ LE RENCONTRER POUR DISCUTER PLUS EN DETAILS
+    * => ANALYSE DES BESOINS
+        * FICHE PROJET
+        * PERSONA CLIENT:   QUI EST LE CLIENT 
+                            QUELLE EST LA MOTIVATION POUR CREER UN SITE ?
+                            => CONTEXTE DU PROJET
+                            => CADRER LE PROJET (POSER LES LIMITES)
+
+        * COMPTER LE NOMBRE DE PAGES DU SITE
+            onepage     => 1 page
+            vitrine     => 10 pages
+            blog        => page blog avec la liste des articles 
+                                et chaque article a sa page
+                            100 pages
+
+    1 page = 1 template + 1 contenu personnalisé
+
+                            template => travail du développeur 
+                                        => IMPORTANT POUR LE DEVELOPPEUR
+                            contenu  => travail du client (ou du visiteur) 
+                            marketplace => 1.000 milliers de pages
+
+                            => peut-être une dizaine de templates
+
+    template (en anglais)   => maquette (en français)
+    => HTML, CSS (JS)
+
+
+    EN PHP, ON VA CREER DES TEMPLATES 
+    QUI VONT RECEVOIR EN FORMULAIRE GET id DU CONTENU QU'ON VEUT RECUPERER EN BASE DE DONNEES
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
